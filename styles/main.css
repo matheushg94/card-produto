@@ -1,0 +1,69 @@
+@charset "utf-8";
+
+/* Mobile version: 375px */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap');
+
+:root {
+    --corp1: hsl(158, 36%, 37%);
+    --corp2: hsl(30, 38%, 92%);
+    --cors1: hsl(228, 12%, 48%);
+    --cors2: hsl(212, 21%, 14%);
+
+    --font-m: 'Montserrat', sans-serif;
+    --font-f: 'Fraunces', serif;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#mainborder {
+    background-color: var(--corp2);
+}
+
+main {
+    width: 375px;
+    background-color: white;
+}
+
+h1 {
+    font-family: var(--font-f);
+}
+
+p {
+    font-family: var(--font-m);
+    font-size: 14px;
+}
+
+#discount {
+    font-family: var(--font-f);
+}
+
+#total {
+    font-family: var(--font-m);
+}
+
+button {
+    font-family: var(--font-m);
+}
+
+footer {
+    align-self: flex-end;
+    width: 100%;
+}
