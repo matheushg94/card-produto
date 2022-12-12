@@ -7,13 +7,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap');
 
 :root {
-    --corp1: hsl(158, 36%, 37%);
-    --corp2: hsl(30, 38%, 92%);
-    --cors1: hsl(228, 12%, 48%);
-    --cors2: hsl(212, 21%, 14%);
+    --corp1: hsl(158, 36%, 37%); /*price, button*/
+    --corp2: hsl(30, 38%, 92%); /*border*/
+    --corp3: hsl(158, 36%, 22%); /*button hover*/
+    --cors1: hsl(228, 12%, 48%); /*text*/
+    --cors2: hsl(212, 21%, 14%); /*title*/
 
-    --font-m: 'Montserrat', sans-serif;
-    --font-f: 'Fraunces', serif;
+    --font-m: 'Montserrat', sans-serif; /*text, button*/
+    --font-f: 'Fraunces', serif; /*title, price*/
 }
 
 * {
@@ -29,19 +30,27 @@ html, body {
 
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: #F0F0F0;
+    overflow-x: hidden;
 }
 
 div#mainborder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 375px;
+    height: 670px;
     background-color: var(--corp2);
-    padding: 35px 20px;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 main {
-    width: 375px;
+    display: flex;
+    flex-direction: column;
+    width: 345px;
     background-color: white;
     border-radius: 10px;
     overflow: hidden;
@@ -54,7 +63,7 @@ main > div#imagem {
 }
 
 main > section#info {
-    padding: 30px;
+    padding: 25px;
 }
 
 section#info > span#topic {
@@ -66,9 +75,10 @@ section#info > span#topic {
 }
 
 section#info > h1 {
+    color: var(--cors2);
     font-family: var(--font-f);
     font-weight: 700;
-    font-size: 2.2em;
+    font-size: 2em;
     line-height: 1em;
     margin: 10px 0px;
 }
@@ -91,16 +101,16 @@ div#price > span#discount {
     color: var(--corp1);
     font-family: var(--font-f);
     font-weight: 700;
-    font-size: 2.2em;
+    font-size: 2em;
 }
 
 div#price > span#total {
-    margin-left: 15px;
     color: var(--cors1);
     font-family: var(--font-m);
     font-weight: 500;
     font-size: 14px;
     text-decoration: line-through;
+    margin-left: 15px;
 }
 
 section#info > button {
@@ -122,7 +132,7 @@ section#info > button {
 }
 
 section#info > button:hover {
-    background-color: hsl(158, 37%, 27%);
+    background-color: var(--corp3);
 }
 
 button > span.material-symbols-outlined {
@@ -131,6 +141,5 @@ button > span.material-symbols-outlined {
 }
 
 footer {
-    background-color: var(--corp2);
-    padding: 5px;
+    margin-top: 15px;
 }

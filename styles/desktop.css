@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+/* Desktop version: 1440px */
+
+div#mainborder {
+    width: 1440px;
+    height: 620px;
+}
+
+main {
+    flex-direction: row;
+    flex-basis: auto;
+    width: 560px;
+}
+
+main > div#imagem {
+    flex-basis: 280px;
+    height: 410px;
+    background: var(--corp2) url(../images/image-product-desktop.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+main > section#info {
+    flex-basis: 280px;
+}
