@@ -26,8 +26,8 @@ Users should be able to:
 
 ### Screenshot
 
-![](./solution-scrshot/ProductPreviewCardComponent_mobile.jpg)
-![](./solution-scrshot/ProductPreviewCardComponent_desktop.jpg)
+![Mobile version](./solution-scrshot/ProductPreviewCardComponent_mobile.jpg)
+![Desktop version](./solution-scrshot/ProductPreviewCardComponent_desktop.jpg)
 
 ### Links
 
