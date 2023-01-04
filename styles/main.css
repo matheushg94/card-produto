@@ -60,7 +60,7 @@ body {
 }
 
 main {
-    min-height: calc(100vh - 20.4px);
+    min-height: calc(100vh - 20.4px); /* 100vh - footer height */
     display: grid;
     place-content: center;
     color: var(--color-secondary-1);
@@ -183,15 +183,3 @@ h1 {
 .footer a:hover {
     color: var(--color-primary-2);
 }
-
-/*@media only screen and (max-height: 700px) and (max-width: 992px) {
-    .footer {
-        position: relative;
-    }
-}
-
-@media only screen and (max-height: 500px) and (min-width: 992px) {
-    .footer {
-        position: relative;
-    }
-}*/
