@@ -1,7 +1,5 @@
 @charset "utf-8";
 
-/* Mobile version: 375px */
-
 :root {
     --color-primary-1: hsl(158, 36%, 37%); /*price, button*/
     --color-primary-2: hsl(158, 36%, 22%); /*button hover*/
@@ -62,7 +60,7 @@ body {
 }
 
 main {
-    min-height: 100vh;
+    min-height: calc(100vh - 20.4px);
     display: grid;
     place-content: center;
     color: var(--color-secondary-1);
@@ -159,31 +157,29 @@ h1 {
     font-size: 1.375rem;
 }
 
-footer {
-    position: fixed;
-    bottom: 0;
+.footer {
     width: 100%;
     text-align: center;
     font-size: 12px;
     font-size: 0.75rem;
 }
 
-footer a {
+.footer a {
     color: var(--color-primary-1)
 }
 
-footer a:hover {
+.footer a:hover {
     color: var(--color-primary-2);
 }
 
-@media only screen and (max-height: 700px) and (max-width: 992px) {
-    footer {
+/*@media only screen and (max-height: 700px) and (max-width: 992px) {
+    .footer {
         position: relative;
     }
 }
 
 @media only screen and (max-height: 500px) and (min-width: 992px) {
-    footer {
+    .footer {
         position: relative;
     }
-}
+}*/
