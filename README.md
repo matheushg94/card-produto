@@ -26,8 +26,8 @@ Users should be able to:
 
 ### Screenshot
 
-![Mobile version](./solution-scrshot/ProductPreviewCardComponent_mobile.jpg)
-![Desktop version](./solution-scrshot/ProductPreviewCardComponent_desktop.jpg)
+![Mobile version](./solution-scrshot/Product-preview-card-component_mobile.jpg)
+![Desktop version](./solution-scrshot/Product-preview-card-component_desktop.jpg)
 
 ### Links
 
@@ -40,16 +40,16 @@ Users should be able to:
 
 - Semantic HTML5 markup
 - CSS custom properties
-- Flexbox
+- Grid and Flexbox layout
 - Mobile-first workflow
 
 ### What I learned
 
-This is my first Frontend Mentor challenge. I'm trying to learn more about flexbox and how to use its attributes to properly display the elements on different screens sizes.
+This is one of my first Frontend Mentor challenges. I'm taking my first steps in studying web development, so pretty much everything is new to me.
 
 ### Continued development
 
-Since I'm just starting my learning of HTML, CSS and web development in general, I'm still focusing on learning every aspect of these technologies, especially the fundamentals.
+Since I'm just starting to learn about web development, I'm trying to focus on the basics of HTML and CSS, while also introducing myself to topics like Flebox and Grid Layout, Mobile-first, naming conventions etc.
 
 ### Useful resources
 
