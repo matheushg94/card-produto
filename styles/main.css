@@ -2,22 +2,21 @@
 
 /* Mobile version: 375px */
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap');
-
 :root {
-    --corp1: hsl(158, 36%, 37%); /*price, button*/
-    --corp2: hsl(30, 38%, 92%); /*border*/
-    --corp3: hsl(158, 36%, 22%); /*button hover*/
-    --cors1: hsl(228, 12%, 48%); /*text*/
-    --cors2: hsl(212, 21%, 14%); /*title*/
+    --color-primary-1: hsl(158, 36%, 37%); /*price, button*/
+    --color-primary-2: hsl(158, 36%, 22%); /*button hover*/
+    --color-primary-3: hsl(30, 38%, 92%); /*background*/
+    --color-secondary-1: hsl(228, 12%, 48%); /*text*/
+    --color-secondary-2: hsl(212, 21%, 14%); /*title*/
 
-    --font-m: 'Montserrat', sans-serif; /*text, button*/
-    --font-f: 'Fraunces', serif; /*title, price*/
+    --ff-base: 'Montserrat', sans-serif; /*text, button*/
+    --ff-accent: 'Fraunces', serif; /*title, price*/
+
+    --fw-normal: 500;
+    --fw-bold: 700;
 }
 
-* {
+*, *::before, *::after {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
@@ -28,93 +27,102 @@ html, body {
     min-height: 100vh;
 }
 
+/* Accessible line-height
+   Improve text rendering */
 body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #F0F0F0;
-    overflow-x: hidden;
-    padding: 10px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
 }
 
-div#mainborder {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 375px;
-    height: 670px;
-    background-color: var(--corp2);
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* Remove built-in form typography styles */
+input, button, textarea, select {
+    font: inherit;
+}
+
+/* Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+h1, h2, h3 {
+    line-height: 1;
+}
+
+/* General styling */
+
+body {
+    background-color: var(--color-primary-3);
+    font-family: var(--ff-base);
+    font-weight: var(--fw-normal);
 }
 
 main {
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+    color: var(--color-secondary-1);
+}
+
+.card {
     display: flex;
     flex-direction: column;
-    width: 345px;
+    width: 355px;
     background-color: white;
     border-radius: 10px;
     overflow: hidden;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
 }
 
-main > div#imagem {
-    height: 260px;
-    background: var(--corp2) url(../images/image-product-mobile.jpg) no-repeat center center;
-    background-size: cover;
-}
-
-main > section#info {
+.content {
     padding: 25px;
 }
 
-section#info > span#topic {
-    color: var(--cors1);
-    font-family: var(--font-m);
-    font-weight: 500;
+.topic {
     font-size: 14px;
+    font-size: 0.875rem;
     letter-spacing: 5px;
 }
 
-section#info > h1 {
-    color: var(--cors2);
-    font-family: var(--font-f);
-    font-weight: 700;
-    font-size: 2em;
-    line-height: 1em;
+h1 {
+    color: var(--color-secondary-2);
+    font-family: var(--ff-accent);
+    font-weight: var(--fw-bold);
+    font-size: 32px;
+    font-size: 2rem;
     margin: 10px 0px;
 }
 
-section#info > p {
-    color: var(--cors1);
-    font-family: var(--font-m);
-    font-weight: 500;
+.description {
     font-size: 14px;
-    line-height: 1.7em;
+    font-size: 0.875rem;
     margin: 15px 0px;
 }
 
-section#info > div#price {
+.price {
     display: flex;
     align-items: center;
 }
 
-div#price > span#discount {
-    color: var(--corp1);
-    font-family: var(--font-f);
-    font-weight: 700;
-    font-size: 2em;
+.price-discount {
+    color: var(--color-primary-1);
+    font-family: var(--ff-accent);
+    font-weight: var(--fw-bold);
+    font-size: 32px;
+    font-size: 2rem;
 }
 
-div#price > span#total {
-    color: var(--cors1);
-    font-family: var(--font-m);
-    font-weight: 500;
+.price-full {
     font-size: 14px;
-    text-decoration: line-through;
+    font-size: 0.875rem;
     margin-left: 15px;
 }
 
-section#info > button {
+.button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -125,22 +133,31 @@ section#info > button {
     border: none;
     border-radius: 10px;
 
-    background-color: var(--corp1);
+    background-color: var(--color-primary-1);
     color: white;
-    font-family: var(--font-m);
-    font-weight: 700;
+    font-weight: var(--fw-bold);
     cursor: pointer;
 }
 
-section#info > button:hover {
-    background-color: var(--corp3);
+.button:is(:hover, :focus) {
+    background-color: var(--color-primary-2);
 }
 
-button > span.material-symbols-outlined {
-    font-size: 1.4em;
+.material-symbols-outlined {
+    font-size: 22px;
+    font-size: 1.375rem;
     padding-right: 10px;
 }
 
 footer {
-    margin-top: 15px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    font-size: 0.75rem;
+}
+
+footer a {
+    color: hsl(228, 45%, 44%)
 }
