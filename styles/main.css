@@ -57,6 +57,7 @@ body {
     background-color: var(--color-primary-3);
     font-family: var(--ff-base);
     font-weight: var(--fw-normal);
+    overflow-x: hidden;
 }
 
 main {
